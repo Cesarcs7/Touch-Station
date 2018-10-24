@@ -1,0 +1,58 @@
+﻿<Page x:Class="SoftwareStation.ScanVorbereitung"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SoftwareStation"
+      mc:Ignorable="d" 
+      d:DesignHeight="960" d:DesignWidth="540"
+      Title="ScanVorbereitung">
+
+    <StackPanel Orientation="vertical"
+                Width="auto"
+                Height="960">
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                        <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#FF870589"/>
+                <GradientStop Color="#FFB80EEA" Offset="1"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+
+        <StackPanel Name="banner" Orientation="Horizontal"
+                    Height="80" Width="540"
+                    Background="Black">
+            <Image Source="Resources\Glogo.png"
+                   Height="50"
+                   Margin="20,0,0,0"></Image>
+            <TextBlock Text="DEIN GOODYSCAN"
+                       Foreground="White"
+                       FontSize="18"
+                       Padding="20,30,0,0"></TextBlock>
+        </StackPanel>
+
+        <TextBlock FontSize="30"
+                       Foreground="White"
+                       Canvas.Left="80"
+                       Canvas.Top="30"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                   Margin="0,50,0,0">
+            FESTHALTEN!<LineBreak/>
+            <LineBreak/>
+            Der Scan wird vorbereitet,<LineBreak/>
+            bitte halten sie den Griff<LineBreak/>
+            jedes Moment und lassen <LineBreak/>
+            Sie es nicht los bis er nicht<LineBreak/>
+            mehr leucht
+        </TextBlock>
+
+    </StackPanel>
+</Page>

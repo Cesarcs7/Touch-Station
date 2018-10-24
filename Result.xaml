@@ -1,0 +1,166 @@
+﻿<Page x:Class="SoftwareStation.Result"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SoftwareStation"
+      mc:Ignorable="d" 
+      d:DesignHeight="960" d:DesignWidth="540"
+      Title="Result">
+    <StackPanel Orientation="Vertical">
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                        <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#FF870589"/>
+                <GradientStop Color="#FFB80EEA" Offset="1"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+
+        <StackPanel Name="banner" Orientation="Horizontal"
+                    Height="80" Width="540"
+                    Background="Black">
+            <Image Source="Resources\Glogo.png"
+                   Height="50"
+                   Margin="20,0,0,0" PreviewMouseDown="Image_PreviewMouseDown"></Image>
+            <TextBlock Text="DEIN GOODYSCANN"
+                       Foreground="White"
+                       FontSize="18"
+                       Padding="20,30,0,0"></TextBlock>
+            <TextBlock 
+                    FontSize="25"
+                    Width="120"
+                    Height="30"
+                    Margin="170,0,0,0"
+                    Foreground="White"
+                Name="profileName"
+                Text="Test"
+                    />
+        </StackPanel>
+
+        <Border >
+            <StackPanel Height="40"
+                    Width="450"
+                   Margin="0,30,0,0"
+                    Background="Black"
+                    Orientation="Horizontal">
+            <TextBlock Text="DATUM:"
+                       FontSize="20"
+                       Foreground="White"
+                       Padding="5"
+                       Margin="10,0,0,0"/>
+            <TextBlock 
+                       Name="date"
+                       Text="10.08.2018"
+                       FontSize="20"
+                       Foreground="#FFCF2498"
+                       Padding="5"
+                       />
+            <TextBlock Text="ZEIT:"
+                       FontSize="20"
+                       Foreground="White"
+                       Padding="5"/>
+            <TextBlock 
+                       Name="time"
+                       Text="9:58 UHR"
+                       FontSize="20"
+                       Foreground="#FFCF2498"
+                       Padding="5"/>
+            <TextBlock Text="ID:"
+                       FontSize="20"
+                       Foreground="White"
+                       Padding="5"/>
+            <TextBlock 
+                       Name="id"
+                       Text="12558"
+                       FontSize="20"
+                       Foreground="#FFCF2498"
+                       Padding="5"/>
+
+        </StackPanel>
+        </Border>
+
+        <Border
+                Margin="0,20,0,0"
+                HorizontalAlignment="Center"
+                BorderThickness="3"
+                BorderBrush="White"
+                CornerRadius="20,20,20,20">
+            <Canvas Height="600"
+                    Width="450">
+                <Line X1="320" Y1="0"
+                      X2="320" Y2="600"
+                      Stroke="White"
+                      StrokeThickness="3"/>
+                <TextBlock Name="desciptionText" Canvas.Left="90" Canvas.Top="10"
+                           FontSize="20"
+                           Foreground="White"
+                           Text="GLÜCKWUNSH"/>
+                <TextBlock Name="desciptionSpan" Canvas.Left="43" Canvas.Top="37"
+                           FontSize="20"
+                           Foreground="White"
+                           FontWeight="Bold"
+                           Text="DU BIST IN TOPFORM"/>
+                <Image Name="statusImg"
+                           Height="90" 
+                           Width="106" Canvas.Left="334" Canvas.Top="10">
+
+                </Image>
+                <TextBlock Text="STATUS" Canvas.Left="352" Canvas.Top="119"
+                          FontSize="20"
+                           Foreground="White"
+                           />
+
+                <TextBlock Name="titleLabel"
+                           Text="ATHLET"
+                       FontSize="30"
+                       Margin="0,0,0,0"
+                        Foreground="White"
+                       HorizontalAlignment="Center"  Canvas.Left="334" Canvas.Top="141"/>
+                <TextBlock Name="resultLabel" Canvas.Left="121" Canvas.Top="92"
+                           FontSize="50"
+                           Foreground="White">
+                94
+                </TextBlock>
+                <Image Source="Resources/indicator.png" Height="89" Width="93" Canvas.Left="188" Canvas.Top="83" ></Image>
+            </Canvas>
+        </Border>
+
+        <TextBlock Text="HOL DIR DEINE DISCOUNTS &amp; GOODYS"
+                   Foreground="White"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,20,0,0"></TextBlock>
+        
+        <Button Content="WEITER"
+                    FontSize="25"
+                    Width="140"
+                    Height="50"
+                    Margin="0,20,0,0"
+                    Foreground="White" Click="Button_Click"
+                    >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF820888" Offset="0.077"/>
+                    <GradientStop Color="#FFB011CD" Offset="0.647"/>
+                    <GradientStop Color="#FFA00ABB" Offset="0.44"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    Height="150">
+
+        </StackPanel>
+
+    </StackPanel>
+</Page>

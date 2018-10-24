@@ -1,0 +1,139 @@
+﻿<Page x:Class="SoftwareStation.Data"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SoftwareStation"
+      mc:Ignorable="d" 
+      d:DesignHeight="960" d:DesignWidth="540"
+      Title="Data">
+
+    <StackPanel Orientation="vertical"
+                Width="auto"
+                Height="960">
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                        <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#FF870589"/>
+                <GradientStop Color="#FFB80EEA" Offset="1"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+
+        <StackPanel Name="banner" Orientation="Horizontal"
+                    Height="80" Width="540"
+                    Background="Black">
+            <Image Source="Resources\Glogo.png"
+                   Height="50"
+                   Margin="20,0,0,0" PreviewMouseDown="Image_PreviewMouseDown"></Image>
+            <TextBlock Text="GOODYSCAN"
+                       Foreground="White"
+                       FontSize="18"
+                       Padding="20,30,0,0"></TextBlock>
+            <Button Content="ZURÜCK"
+                    FontSize="15"
+                    Width="120"
+                    Height="30"
+                    Margin="170,0,0,0"
+                    Foreground="White" Click="Button_Click_1"
+                    >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FF8C0483" Offset="0"/>
+                        <GradientStop Color="#FFC55CBE" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <Image Source="Resources/avatar.png" 
+               Height="147" 
+               Margin="10,40,0,0"/>
+        <TextBlock FontSize="30"
+                       Foreground="White"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                   Margin="0,0,0,0">
+                        Willkommen
+        </TextBlock>
+        <TextBlock  FontSize="30"
+                       Foreground="White"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                    FontWeight="Bold"
+                    Name="vornameText"
+                   Margin="0,0,0,0">
+            
+        </TextBlock>
+        <TextBlock FontSize="30"
+                       Foreground="White"
+                       Canvas.Left="800"
+                       Canvas.Top="30"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                   Margin="0,50,0,0">
+            Gleich geht's los. Trage noch <LineBreak/>
+            dein aktuelles Gewicht sowie <LineBreak/>
+            deine Größe ein und starte.
+        </TextBlock>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,20,0,0">
+            <TextBlock 
+            Foreground="White"
+            FontSize="25"
+            Margin="50,5,0,0">Gewicht (Kg)
+            </TextBlock>
+            <TextBox
+            Name="loggedGewicht"
+            Width="50"
+            Height="25"
+            Margin="80,0,50,0"
+            Padding="0,1.5,0,0"
+            FontSize="15"
+            TextAlignment="Center"
+            >
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock 
+            Foreground="White"
+            FontSize="25"
+            Margin="50,5,0,0">Größe (Cm)
+            </TextBlock>
+            <TextBox
+            Name="loggedGröße"
+            Width="50"
+            Height="25"
+            Margin="93,0,100,0"
+            Padding="0,1.5,0,0"
+            FontSize="15"
+            TextAlignment="Center"
+            >
+            </TextBox>
+        </StackPanel>
+
+        <Button Content="WEITER"
+                    FontSize="25"
+                    Width="140"
+                    Height="50"
+                    Margin="5,50,0,0"
+                    Foreground="White" Click="Button_Click"
+                    Name="weiterD"
+                    >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF820888" Offset="0.077"/>
+                    <GradientStop Color="#FFB011CD" Offset="0.647"/>
+                    <GradientStop Color="#FFA00ABB" Offset="0.44"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </StackPanel>
+</Page>

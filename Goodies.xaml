@@ -1,0 +1,147 @@
+﻿<Page x:Class="SoftwareStation.Goodies"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SoftwareStation"
+      mc:Ignorable="d" 
+      d:DesignHeight="960" d:DesignWidth="540"
+      Title="Goodies">
+    <StackPanel Orientation="vertical"
+                Width="auto"
+                Height="960"
+                Background="Black">
+
+
+        <StackPanel Name="banner" Orientation="Horizontal"
+                    Height="80" Width="540"
+                    Background="Black">
+            <Image Source="Resources\Glogo.png"
+                   Height="50"
+                   Margin="20,0,0,0" PreviewMouseDown="Image_PreviewMouseDown"></Image>
+            <TextBlock Text="DEIN GOODYSCAN"
+                       Foreground="White"
+                       FontSize="18"
+                       Padding="20,20,0,0"></TextBlock>
+            <TextBlock 
+                    FontSize="25"
+                    Width="120"
+                    Height="30"
+                    Margin="170,0,0,0"
+                    Foreground="White"
+                Name="profileName"
+                Text="Test"
+                    />
+        </StackPanel>
+
+        <TextBlock FontSize="30"
+                       Foreground="#FFF066C4"
+                   FontWeight="Bold"
+                       Canvas.Left="80"
+                       Canvas.Top="20"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                   Margin="0,50,0,0">
+            DEINE PRODUKTE
+        </TextBlock>
+        <TextBlock Text="WOCHE VOM 31.07.2018-05.08.2018"
+                   Foreground="White"
+                   HorizontalAlignment="Center"
+                   FontSize="15"
+                   Margin="0,10,0,0"></TextBlock>
+
+        <StackPanel Margin="0,50,0,0">
+            <StackPanel Orientation="Horizontal"
+                        Width="540"
+                        Height="200">
+
+
+
+                <Image x:Name="goodie1"
+                    Stretch="Fill"
+                         
+                    Height="150"
+                    Width="150" PreviewMouseDown="goodie1_PreviewMouseDown"
+                    Margin="30,0,0,0"
+                       />
+
+
+
+                <Image x:Name="goodie2" 
+                           Stretch="Fill"
+                    Width="150" PreviewMouseDown="goodie2_PreviewMouseDown"
+                    Margin="15,25"
+                       />
+
+
+
+                <Image x:Name="goodie3"
+                           Stretch="Fill"
+                    Height="150"
+                    Width="150" PreviewMouseDown="goodie3_PreviewMouseDown"
+                    Margin="0,0,30,0"
+                       />
+
+
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Width="540"
+                        Height="200">
+
+
+
+                <Image Name="goodie4"
+                           Stretch="Fill"
+                    Height="150"
+                       Width="150" PreviewMouseDown="goodie4_PreviewMouseDown"
+                      Margin="30,0,0,0" >
+                </Image>
+
+
+
+
+                <Image Name="goodie5" 
+                           Stretch="Fill"
+                    Height="150"
+                       Width="150" PreviewMouseDown="goodie5_PreviewMouseDown"
+                       Margin="15,0,15,0">
+                </Image>
+
+
+
+
+                <Image Name="goodie6"
+                           Stretch="Fill"
+                    Height="150"
+                       Width="150" PreviewMouseDown="goodie6_PreviewMouseDown"
+                       Margin="0,0,30,0">
+                </Image>
+
+
+            </StackPanel>
+        </StackPanel>
+        <TextBlock Foreground="White"
+                   FontSize="20"
+                   Margin="0,10,0,0"
+                   HorizontalAlignment="Center">
+            HOL DIR DEINE PRODUKTE UND LOG DICH AUS
+        </TextBlock>
+        <Button Content="LOGOUT"
+                    FontSize="25"
+                    Width="140"
+                    Height="50"
+                    Margin="5,50,0,0"
+                    Foreground="White" Click="Button_Click"
+                    >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF820888" Offset="0.077"/>
+                    <GradientStop Color="#FFB011CD" Offset="0.647"/>
+                    <GradientStop Color="#FFA00ABB" Offset="0.44"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </StackPanel>
+</Page>
